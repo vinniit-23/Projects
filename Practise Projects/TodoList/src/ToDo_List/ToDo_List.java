@@ -32,7 +32,7 @@ public class ToDo_List {
         viewTask();
         if (count == 0) return;
         System.out.println("Enter task number to mark as completed: ");
-        int tasknum= in.nextInt();
+        int tasknum= in.nextInt()-1;
         if (tasknum>=0 && tasknum<count){
             String task = arr[tasknum];
             if (task.startsWith("[Completed]")) {
