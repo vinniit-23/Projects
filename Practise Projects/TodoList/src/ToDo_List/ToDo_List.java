@@ -31,6 +31,7 @@ public class ToDo_List {
             System.out.println((i + 1) + ". " + tasks[i]);
         }
     }
+<<<<<<< HEAD
 
     public static void markTaskCompleted() {
         viewTasks();
@@ -43,6 +44,17 @@ public class ToDo_List {
             } else {
                 tasks[taskNum] = tasks[taskNum].replace("[Pending]", "[Completed]");
                 System.out.println("Task marked as completed.");
+=======
+    public static void markTaskCompleted(){
+        viewTask();
+        if (count == 0) return;
+        System.out.println("Enter task number to mark as completed: ");
+        int tasknum= in.nextInt()-1;
+        if (tasknum>=0 && tasknum<count){
+            String task = arr[tasknum];
+            if (task.startsWith("[Completed]")) {
+                System.out.println("Task already completed");
+>>>>>>> e20b22943b6a36dd9a6df599e73825527b04c499
             }
         } else {
             System.out.println("Invalid task number.");
@@ -100,4 +112,9 @@ public class ToDo_List {
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> e20b22943b6a36dd9a6df599e73825527b04c499
