@@ -1,0 +1,53 @@
+while (option!=7){
+            System.out.println("Choose an option:");
+            System.out.println("1. Login");
+            System.out.println("2. Sign Up");
+            System.out.println("3. Book Ticket");
+            System.out.println("4. Cancel Ticket");
+            System.out.println("5. View Ticket");
+            System.out.println("6. View All Tickets");
+            System.out.println("7. Exit");
+            option = in.nextInt();
+            in.nextLine(); // Consume newline
+            switch (option) {
+                case 1:
+                    System.out.println("Enter username:");
+                    String username = in.nextLine();
+                    System.out.println("Enter password:");
+                    String password = in.nextLine();
+                    if (userBookingService.loginUser(username, password)) {
+                        System.out.println("Login successful");
+                    } else {
+                        System.out.println("Invalid username or password");
+                    }
+                    break;
+                case 2:
+                    System.out.println("Enter username:");
+                    String newUsername = in.nextLine();
+                    System.out.println("Enter password:");
+                    String newPassword = in.nextLine();
+                    if (userBookingService.signUp(newUsername, newPassword)) {
+                        System.out.println("Sign up successful");
+                    } else {
+                        System.out.println("Sign up failed");
+                    }
+                    break;
+                case 3:
+                    // Book ticket logic
+                    break;
+                case 4:
+                    // Cancel ticket logic
+                    break;
+                case 5:
+                    // View ticket logic
+                    break;
+                case 6:
+                    // View all tickets logic
+                    break;
+                case 7:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+        }
