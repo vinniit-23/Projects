@@ -119,7 +119,7 @@ public class Notepad extends JFrame implements ActionListener {
 
           JFileChooser chooser = new JFileChooser();
           chooser.setAcceptAllFileFilterUsed(false);
-          FileNameExtensionFilter restrict = new FileNameExtensionFilter("only .txt files","txt");
+          FileNameExtensionFilter restrict = new FileNameExtensionFilter("only .txt files ","txt");
           chooser.addChoosableFileFilter(restrict);
 
           int action =chooser.showOpenDialog(this);
